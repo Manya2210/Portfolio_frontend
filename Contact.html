@@ -41,7 +41,7 @@
         const formData = new FormData(this);
         const data = Object.fromEntries(formData.entries());
 
-        fetch("http://localhost:3000/submit-form", {
+        fetch("https://portfolio-veu5.onrender.com/submit-form", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(data)
