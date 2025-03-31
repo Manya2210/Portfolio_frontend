@@ -6,34 +6,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="assets/css/style3.css">
+    <link rel="stylesheet" href="assets/css/style4.css">
 </head>
 <body>
     <h1>Contact Me</h1>
+    <table>
+        <td>
     <div class ="form-container">
-    <form action="/submit" method="POST" id="contactForm">
+    <form onsubmit="event.preventDefault();onFormSubmit();" action="/submit" method="POST" id="contactForm"  autocomplete="off">
         <div class ="name">
+        <label for "Name" ></label><label class="validation-error hide" id="first_nameValidationError"></label>
+        <input type="text"  name ="first_name" id="first_name" placeholder="First name">
         <label for "Name" ></label>
-        <input type="text"  name ="first_name" placeholder="First name">
-        <label for "Name" ></label>
-        <input type="text"  name="surname" placeholder="Surname" >
+        <input type="text"  name="surname" id="surname" placeholder="Surname" >
     </div>
         <br>
         <div class ="phone">
         <label for ="phone" ></label>
         <input type="tel"  name="phone" placeholder="Enter your phone number">
         <label for ="email" ></label>
-        <input type="email" name="email" placeholder ="Enter your email">
+        <input type="email" name="email" id="phone" placeholder ="Enter your email">
     </div>
         <br>
         <div class ="message">
-        <label for ="message" placeholder = Write a message...></label>
-        <input type="message"  name="message" placeholder = Write a message...>
+        <label for ="message" placeholder = Write_a_message...></label>
+        <input type="text"  name="textarea" id="message"rows="10" columns="30" placeholder = Write_a_message...>
     </div>
     <div class="container">
     <button>Send Message</button>
 </div>
     </form>
 </div>
+</td>
+<td>
+<table class ="list" id="userData">
+    <thead>
+    <tr>
+        <th>first_name</th>
+        <th>surname</th>
+        <th>phone</th>
+        <th>email</th>
+    </tr>
+</thead>
+<tbody>
+
+</tbody>
+</td>
+</table>
+<script src="https://portfolio-veu5.onrender.com/script.js"></script>
 <script>
     document.getElementById("contactForm").addEventListener("submit", function(event) {
         event.preventDefault();

@@ -1,0 +1,12 @@
+table, th, td{
+    border:1px solid  black;
+    border-collapse: collapse;
+    align-items: center;
+    margin: 0 auto;
+    padding: 20px;
+}
+.list{
+    margin-top:60px;
+    width: 80%;
+    background-color: lightcyan;
+}
